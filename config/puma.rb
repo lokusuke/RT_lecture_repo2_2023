@@ -17,8 +17,9 @@ threads min_threads_count, max_threads_count
 worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
 
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
-#
-port ENV.fetch("PORT") { 3000 }
+
+#-> unixドメインソケットでNginxと通信させたいのでコメント
+#port ENV.fetch("PORT") { 3000 } 
 
 # Specifies the `environment` that Puma will run in.
 #
@@ -29,7 +30,10 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
 # Specifies the `sockfile` that Puma will use.
 # アプリケーションを配置している場所によってpathを変更する
-bind "unix:///home/ec2-user/raisetech-live8-sample-app/tmp/sockets/puma.sock"
+bind "unix://#{Rails.root}/tmp/sockets/puma.sock"
+
+#bind "unix:///tmp/sockets/puma.sock"
+
 # Specifies the number of `workers` to boot in clustered mode.
 # Workers are forked web server processes. If using threads and workers together
 # the concurrency of the application would be max `threads` * `workers`.
