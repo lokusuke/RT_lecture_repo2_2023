@@ -75,6 +75,6 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   #config.hosts << "app_server"
-  config.hosts << "test-alb-2017183245.ap-northeast-1.elb.amazonaws.com"
+  config.hosts << "test-alb-1619924071.ap-northeast-1.elb.amazonaws.com"
   
 end
