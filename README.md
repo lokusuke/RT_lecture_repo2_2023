@@ -1,7 +1,7 @@
 
 # 第5回課題用
 - 第3,4回課題用は以下(第5回からサンプルアプリ導入のためリポジトリ変更)
-  - https://github.com/lokusuke/RaiseTech_lecture_repo1
+  - https://github.com/lokusuke/RT_lecture_repo1_2023
 - Nginx側の設定ファイルは以下
   - https://github.com/lokusuke/Nginx-test
 ## raisetech-live8-sample-app
